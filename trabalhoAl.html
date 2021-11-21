@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trabalho Supermercado</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+        <h1><b>LISTA DE COMPRAS:</b></h1>
+        <p><h3>-Mamão</h3></p>
+        <p><h3>-Laranja</h3></p>
+        <p><h3>-Abacate</h3></p>
+        <p><h3>-Uva</h3></p>
+        <p><h3>-Abacaxi</h3></p>
+ 
+     <h2>PREÇOS</h2>
+ <table border="1">
+    <tr>
+        <td>Abacate R$5,00</td>
+        <td>Abacaxi R$8,00</td>
+        <td>Laranja R$4,00</td>
+    </tr>
+    <tr>
+        <td>Mamão R$6,00</td>
+        <td>Morango R$8,00</td>
+        <td>Maçã R$3,00</td>
+    </tr>
+    <tr>
+        <td>Uva R$8,00</td>
+        <td>Limão R$2,00</td>
+        <td>Melancia R$7,00</td>
+    </tr>
+     <tr>
+        <td>Kiwi R$6,00</td>
+        <td>Melão R$7,00</td>
+        <td>Banana R$5,00</td>
+    </tr>
+</table>
+     
+     
+   <div id="app-calc">
+    <p>o valor do item um: {{n1}}</p>
+    <p>o valor do item dois: {{n2}}</p>
+    <p>o valor do item três: {{n3}}</p>
+    <p>o valor do item quatro: {{n4}}</p>
+    <p>o valor do item cinco: {{n5}}</p>
+ 
+    
+    
+   
+    
+    <p>Preço total: {{ result }}</p>
+
+    <input v-model.number="n1" type="number">
+    <input v-model.number="n2" type="number">
+    <input v-model.number="n3" type="number">
+    <input v-model.number="n4" type="number">
+    <input v-model.number="n5" type="number">
+    
+
+    <button v-on:click="sumFunction">Sum</button>
+
+  
+
+    
+  </div>
+
+  <script>
+    var app7 = new Vue({
+        el: '#app-calc',
+        data: {
+            n1: 10,
+            n2: 2,
+            n3: 0,
+            n4: 0,
+            n5: 0,
+            result:0
+        },
+        methods: {
+          sumFunction: function () {
+              this.result = this.n1 + this.n2 + this.n3 + this.n4 + this.n5;
+          }
+       }
+    })
+  </script>
+
+<p>Seja redirecionado ao Currículo:
+  <a href="file:///C:/Users/jeane/OneDrive/Documentos/Arthur%20t/Curriculo%20Arthur/index.html#contact">Currículo Arthur</a></p>
+
+<p>Seja redirecionado ao Currículo:
+  <a href="file:///C:/Users/jeane/Downloads/Curriculo%20Sarah/index.html#contact">Currículo Sarah</a></p>
+
+</p>
+</body>
+</html>
